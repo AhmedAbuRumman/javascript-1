@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+
+<form>
+    <select id="selectList" name="mySelect" onchange = "imgChange (this);">
+        <option value="./images/noimage.png">select</option> 
+      <option value="./images/norway.png" >Norway</option>
+      <option value="./images/italy.png">Italy</option>
+      
+    </select>
+
+
+</form>
+    
+    
+
+
+
+
+<img src="./images/noimage.png" name="image-swap" />  
+
+
+
+<script>
+
+    function imgChange(select){
+      var image = document.getElementsByName("image-swap")[0];
+      image.src = select.options[select.selectedIndex].value;
+    }  
+    
+    
+
+        
+        </script>
+</body>
+</html>

@@ -10,11 +10,38 @@
             border: 1px solid black;
         }
     </style>
-    <script>
-        /* TODO: write JS code here */
-    </script>
+    
 </head>
 <body>
 <div id="mydiv"></div>
+<script>
+              
+              changeColor = document.getElementById('mydiv'),
+        colors = ['red' , 'green', 'blue'];
+         colorIndex = 0;
+
+        function M() 
+        {
+            document.getElementById('mydiv').style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        };
+
+           changeColor.addEventListener('click',M) 
+
+    
+    
+    // document.getElementById("mydiv").onclick=function()
+    // {
+    //     document.getElementById("mydiv").style.backgroundColor="red"
+    // }
+    // document.getElementById("mydiv").onclick=function()
+    // {
+    //     document.getElementById("mydiv").style.backgroundColor="blue"
+    // }
+    // document.getElementById("mydiv").onclick=function()
+    // {
+    //     document.getElementById("mydiv").style.backgroundColor="green"
+    // }
+        </script>
 </body>
 </html>
